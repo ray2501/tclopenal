@@ -1,0 +1,94 @@
+# tclsndfile.test --
+#
+#	Tests for tclsndfile
+#------------------------------------------------------------------------------
+
+lappend auto_path .
+if {[lsearch [namespace children] ::tcltest] == -1} {
+    package require tcltest 2
+    namespace import -force ::tcltest::*
+}
+loadTestedCommands
+package require openal
+
+
+#-------------------------------------------------------------------------------
+
+
+test openal-1.1 {initialize wrong args} {*}{
+    -body {
+        openal::device dev0 -device
+    }
+    -returnCodes error
+    -match glob
+    -result {wrong # args*}
+}
+
+test openal-1.2 {initialize} {*}{
+    -body {
+        catch {openal::device dev0}
+    }
+    -result {0}
+}
+
+test openal-1.3 {setListener wrong args} {*}{
+    -body {
+        dev0 setListener AL_GAIN
+    }
+    -returnCodes error
+    -match glob
+    -result {wrong # args*}
+}
+
+test openal-1.4 {setListener AL_GAIN} {*}{
+    -body {
+        catch {dev0 setListener AL_GAIN 1.0}
+    }
+    -result {0}
+}
+
+test openal-1.5 {getListener AL_GAIN} {*}{
+    -body {
+        dev0 getListener AL_GAIN
+    }
+    -result {1.0}
+}
+
+test openal-1.6 {createSource} {*}{
+    -body {
+        catch {dev0 createSource}
+    }
+    -result {0}
+}
+
+test openal-1.7 {createBuffer} {*}{
+    -body {
+        catch {dev0 createBuffer}
+    }
+    -result {0}
+}
+
+test openal-1.8 {destroyBuffer} {*}{
+    -body {
+        catch {dev0 destroyBuffer}
+    }
+    -result {0}
+}
+
+test openal-1.9 {destroySource} {*}{
+    -body {
+        catch {dev0 destroySource}
+    }
+    -result {0}
+}
+
+test openal-1.10 {device close} {*}{
+    -body {
+        catch {dev0 close}
+    }
+    -result {0}
+}
+
+
+cleanupTests
+return

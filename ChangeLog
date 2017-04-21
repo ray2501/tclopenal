@@ -1,0 +1,34 @@
+2017-04-22  Danilo Chang
+
+    * Bump version to 0.3
+    * Update README.md
+    * Update license year
+
+2016-12-30  Danilo Chang
+
+    * Bump version to 0.2
+    * Add AL_SEC_OFFSET and AL_SAMPLE_OFFSET support
+    * Give the RPM spec correct name
+    * Add queueBuffers and unqueueBuffers command
+
+2016-12-29  Danilo Chang
+
+    * Add more than 1 buffer support
+    * Let getSource query to AL_BUFFERS_PROCESSED and AL_BUFFERS_QUEUED
+    * Update README.md
+
+2016-12-28  Danilo Chang
+
+    * Add openal::capture command
+    * Add openal::list_captures command
+
+2016-12-27  Danilo Chang
+
+    * Update README.md, add examples
+    * Add openal::device command
+
+2016-12-26  Danilo Chang
+
+    * Add openal::list_devices command
+    * Dump sample extension
+
