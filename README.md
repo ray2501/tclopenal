@@ -332,7 +332,6 @@ Cowork with [tclmpg123](https://github.com/ray2501/tclmpg123):
         set channels [dict get $data channels]
         set samplerate [dict get $data samplerate]
         set size [expr [dict get $data length] * $channels * $bits / 8]
-        set buffersize 882200
         set buffersize [expr $samplerate * $bits / 8]
         mpg0 buffersize $buffersize
         set buffer_number [expr $size / $buffersize + 1]
