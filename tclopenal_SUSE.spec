@@ -4,8 +4,8 @@
 
 Name:          tclopenal
 Summary:       Tcl bindings for OpenAL (open audio library)
-Version:       0.3
-Release:       1
+Version:       0.4
+Release:       0
 License:       LGPL v2.1
 Group:         Development/Libraries/Tcl
 Source:        %{name}-%{version}.tar.gz
