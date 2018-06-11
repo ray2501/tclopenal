@@ -2,7 +2,7 @@
  * topenal.c -
  *
  * Tcl bindings for OpenAL (Open Audio library)
- * Copyright (C) Danilo Chang 2016
+ * Copyright (C) Danilo Chang 2016-2018
  */
 
 /*
