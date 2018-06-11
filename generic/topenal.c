@@ -1154,7 +1154,7 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
       ALCenum error;
       ALenum alFormat = AL_FORMAT_STEREO16;
       const char *format = NULL;
-      const char *byteArray = NULL;
+      const unsigned char *byteArray = NULL;
       int len, bytelength;
       int samplerate;
       int index = 0;
@@ -1198,7 +1198,7 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
           alFormat = AL_FORMAT_STEREO16;
       }
 
-      byteArray = Tcl_GetStringFromObj(objv[3], &bytelength);
+      byteArray = Tcl_GetByteArrayFromObj(objv[3], &bytelength);
       if(!byteArray || bytelength < 1) {
          Tcl_AppendResult(interp, "Error: data is empty string!", (char*)0);
          return TCL_ERROR;
@@ -1213,7 +1213,7 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
          return TCL_ERROR;
       }
 
-      alBufferData(pDevice->buffer[index], alFormat, (char *) byteArray,
+      alBufferData(pDevice->buffer[index], alFormat, (unsigned char *) byteArray,
                    bytelength, samplerate);
       error = alGetError();
       if (error != AL_NO_ERROR) {
