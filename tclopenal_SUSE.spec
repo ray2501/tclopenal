@@ -8,7 +8,7 @@ Version:       0.3
 Release:       1
 License:       LGPL v2.1
 Group:         Development/Libraries/Tcl
-Source:        https://github.com/ray2501/tclopenal/tclopenal_0.3.zip
+Source:        %{name}-%{version}.tar.gz
 URL:           https://github.com/ray2501/tclopenal
 BuildRequires: autoconf
 BuildRequires: make
@@ -22,7 +22,7 @@ BuildRoot:     %{buildroot}
 Tcl bindings for OpenAL (open audio library).
 
 %prep
-%setup -q -n %{name}
+%setup -q -n %{name}-%{version}
 
 %build
 ./configure \
