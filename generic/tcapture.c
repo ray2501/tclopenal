@@ -124,7 +124,7 @@ int CaptureObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
           return_obj = Tcl_NewStringObj((char *) "", -1);
       }
 
-      return_obj = Tcl_NewStringObj((char *) pDevice->buffer,
+      return_obj = Tcl_NewByteArrayObj((unsigned char *) pDevice->buffer,
                    sample * pDevice->channels * pDevice->bits / 8);
 
       Tcl_SetObjResult(interp, return_obj);
