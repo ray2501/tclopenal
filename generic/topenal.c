@@ -131,7 +131,9 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
            return TCL_ERROR;
          }
       } else if(strcmp(zArg, "AL_POSITION")==0) {
-         Tcl_ListObjLength(interp, objv[3], &count);
+         if (Tcl_ListObjLength(interp, objv[3], &count) != TCL_OK) {
+            return TCL_ERROR;
+         }
 
          if(count != 3) {
             Tcl_AppendResult(interp, "AL_POSITION: parameter number is wrong!", (char*)0);
@@ -161,7 +163,9 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
            return TCL_ERROR;
          }
       } else if(strcmp(zArg, "AL_VELOCITY")==0) {
-         Tcl_ListObjLength(interp, objv[3], &count);
+         if (Tcl_ListObjLength(interp, objv[3], &count) != TCL_OK) {
+            return TCL_ERROR;
+         }
 
          if(count != 3) {
             Tcl_AppendResult(interp, "AL_VELOCITY: parameter number is wrong!", (char*)0);
@@ -191,7 +195,9 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
            return TCL_ERROR;
          }
       } else if(strcmp(zArg, "AL_ORIENTATION")==0) {
-         Tcl_ListObjLength(interp, objv[3], &count);
+         if (Tcl_ListObjLength(interp, objv[3], &count) != TCL_OK) {
+            return TCL_ERROR;
+         }
 
          if(count != 6) {
             Tcl_AppendResult(interp, "AL_ORIENTATION: parameter number is wrong!", (char*)0);
@@ -580,7 +586,9 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
            return TCL_ERROR;
          }
       } else if(strcmp(zArg, "AL_POSITION")==0) {
-         Tcl_ListObjLength(interp, objv[3], &count);
+         if (Tcl_ListObjLength(interp, objv[3], &count) != TCL_OK) {
+            return TCL_ERROR;
+         }
 
          if(count != 3) {
             Tcl_AppendResult(interp, "AL_POSITION: parameter number is wrong!", (char*)0);
@@ -610,7 +618,9 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
            return TCL_ERROR;
          }
       } else if(strcmp(zArg, "AL_VELOCITY")==0) {
-         Tcl_ListObjLength(interp, objv[3], &count);
+         if (Tcl_ListObjLength(interp, objv[3], &count) != TCL_OK) {
+            return TCL_ERROR;
+         }
 
          if(count != 3) {
             Tcl_AppendResult(interp, "AL_VELOCITY: parameter number is wrong!", (char*)0);
@@ -640,7 +650,9 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
            return TCL_ERROR;
          }
       } else if(strcmp(zArg, "AL_ORIENTATION")==0) {
-         Tcl_ListObjLength(interp, objv[3], &count);
+         if (Tcl_ListObjLength(interp, objv[3], &count) != TCL_OK) {
+            return TCL_ERROR;
+         }
 
          if(count != 6) {
             Tcl_AppendResult(interp, "AL_ORIENTATION: parameter number is wrong!", (char*)0);
