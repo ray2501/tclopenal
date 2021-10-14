@@ -260,7 +260,7 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
            return TCL_ERROR;
          }
 
-         return_obj = Tcl_NewListObj(0, NULL);
+         return_obj = Tcl_NewListObj(3, NULL);
          Tcl_ListObjAppendElement(interp, return_obj, Tcl_NewDoubleObj((double) value1));
          Tcl_ListObjAppendElement(interp, return_obj, Tcl_NewDoubleObj((double) value2));
          Tcl_ListObjAppendElement(interp, return_obj, Tcl_NewDoubleObj((double) value3));
@@ -272,7 +272,7 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
            return TCL_ERROR;
          }
 
-         return_obj = Tcl_NewListObj(0, NULL);
+         return_obj = Tcl_NewListObj(3, NULL);
          Tcl_ListObjAppendElement(interp, return_obj, Tcl_NewDoubleObj((double) value1));
          Tcl_ListObjAppendElement(interp, return_obj, Tcl_NewDoubleObj((double) value2));
          Tcl_ListObjAppendElement(interp, return_obj, Tcl_NewDoubleObj((double) value3));
@@ -865,7 +865,7 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
            return TCL_ERROR;
          }
 
-         return_obj = Tcl_NewListObj(0, NULL);
+         return_obj = Tcl_NewListObj(3, NULL);
          Tcl_ListObjAppendElement(interp, return_obj, Tcl_NewDoubleObj((double) value1));
          Tcl_ListObjAppendElement(interp, return_obj, Tcl_NewDoubleObj((double) value2));
          Tcl_ListObjAppendElement(interp, return_obj, Tcl_NewDoubleObj((double) value3));
@@ -877,7 +877,7 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
            return TCL_ERROR;
          }
 
-         return_obj = Tcl_NewListObj(0, NULL);
+         return_obj = Tcl_NewListObj(3, NULL);
          Tcl_ListObjAppendElement(interp, return_obj, Tcl_NewDoubleObj((double) value1));
          Tcl_ListObjAppendElement(interp, return_obj, Tcl_NewDoubleObj((double) value2));
          Tcl_ListObjAppendElement(interp, return_obj, Tcl_NewDoubleObj((double) value3));
