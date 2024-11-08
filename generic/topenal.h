@@ -20,8 +20,8 @@ extern "C" {
 #include <AL/al.h>
 #include <AL/alc.h>
 
-int List_device_Cmd(ClientData arg, Tcl_Interp * interp, int objc, Tcl_Obj * CONST objv[]);
-int List_capture_Cmd(ClientData arg, Tcl_Interp * interp, int objc, Tcl_Obj * CONST objv[]);
+int List_device_Cmd(ClientData arg, Tcl_Interp * interp, int objc, Tcl_Obj * const objv[]);
+int List_capture_Cmd(ClientData arg, Tcl_Interp * interp, int objc, Tcl_Obj * const objv[]);
 int DeviceMain(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv);
 int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv);
 int CaptureMain(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv);

@@ -182,7 +182,7 @@ int CaptureMain(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
   ALenum alFormat = AL_FORMAT_STEREO16;
   int samplerate = 44100;
   int buffersize = 0;
-  int len = 0;
+  Tcl_Size len = 0;
   int i = 0;
 
   if( objc < 2 || (objc&1)!=0 ){

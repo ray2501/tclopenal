@@ -110,7 +110,8 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
       const char *zArg = NULL;
       double value1 = 0.0, value2 = 0.0, value3 = 0.0;
       ALfloat listenerOri[6];
-      int count = 0, i = 0;
+      Tcl_Size count = 0;
+      int i = 0;
       ALCenum error;
 
       if( objc != 4 ){
@@ -361,8 +362,8 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
       const char *state;
       double value1 = 0.0, value2 = 0.0, value3 = 0.0;
       ALfloat listenerOri[6];
-      int count = 0, i = 0;
-      int len = 0;
+      int i = 0;
+      Tcl_Size count = 0, len = 0;
       int isLooping = 0, relative = 0;
       ALCenum error;
 
@@ -1167,7 +1168,7 @@ int DeviceObjCmd(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
       ALenum alFormat = AL_FORMAT_STEREO16;
       const char *format = NULL;
       const unsigned char *byteArray = NULL;
-      int len, bytelength;
+      Tcl_Size len, bytelength;
       int samplerate;
       int index = 0;
 
@@ -1373,7 +1374,7 @@ int DeviceMain(void *cd, Tcl_Interp *interp, int objc,Tcl_Obj *const*objv)
   DeviceData *p;
   const char *zArg = NULL;
   const char *devicename = NULL;
-  int len = 0;
+  Tcl_Size len = 0;
   int i = 0;
 
   if( objc < 2 || (objc&1)!=0 ){

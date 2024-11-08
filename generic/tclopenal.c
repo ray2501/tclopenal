@@ -28,7 +28,7 @@ extern "C" {
 #endif
 
 
-int List_device_Cmd(ClientData arg, Tcl_Interp * interp, int objc, Tcl_Obj * CONST objv[])
+int List_device_Cmd(ClientData arg, Tcl_Interp * interp, int objc, Tcl_Obj * const objv[])
 {
     ALboolean enumeration;
     const ALCchar *device;
@@ -64,7 +64,7 @@ int List_device_Cmd(ClientData arg, Tcl_Interp * interp, int objc, Tcl_Obj * CON
 }
 
 
-int List_capture_Cmd(ClientData arg, Tcl_Interp * interp, int objc, Tcl_Obj * CONST objv[])
+int List_capture_Cmd(ClientData arg, Tcl_Interp * interp, int objc, Tcl_Obj * const objv[])
 {
     ALboolean enumeration;
     const ALCchar *device;
@@ -126,16 +126,16 @@ Openal_Init(Tcl_Interp *interp)
 	return TCL_ERROR;
     }
 	
-    Tcl_CreateObjCommand(interp, "openal::list_devices", List_device_Cmd,
+    Tcl_CreateObjCommand(interp, "::openal::list_devices", List_device_Cmd,
             NULL, NULL);
     
-    Tcl_CreateObjCommand(interp, "openal::list_captures", List_capture_Cmd,
+    Tcl_CreateObjCommand(interp, "::openal::list_captures", List_capture_Cmd,
             NULL, NULL);
 
-    Tcl_CreateObjCommand(interp, "openal::device", (Tcl_ObjCmdProc *) DeviceMain,
+    Tcl_CreateObjCommand(interp, "::openal::device", (Tcl_ObjCmdProc *) DeviceMain,
             (ClientData) NULL, (Tcl_CmdDeleteProc *) NULL);    
 
-    Tcl_CreateObjCommand(interp, "openal::capture", (Tcl_ObjCmdProc *) CaptureMain,
+    Tcl_CreateObjCommand(interp, "::openal::capture", (Tcl_ObjCmdProc *) CaptureMain,
             (ClientData) NULL, (Tcl_CmdDeleteProc *) NULL);
 
     return TCL_OK;
